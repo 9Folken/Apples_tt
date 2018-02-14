@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Тег meta для указания кодировки -->
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <div id="text"></div>
+        <script language="javascript">
+        //document.getElementById("text").value="Hello";
+        document.getElementById("text").innerHTML="Hello";
+
+        </script>
+
+  <p></p>
+<div>
+"--------------"
+</div>
+  <div>
+      <button onclick="garden.addNewTree()">добавить дерево</button>
+    <button onclick="garden.countTrees()">посчитать деревья</button>
+    <button onclick="appleAdd()">добавить яблоко</button>
+    <button onclick="garden.countAppels()">яблок в саду</button>
+    <button onclick="garden.passDay(10)">пропустить день</button>
+  </div>
+
+
+
+<div>
+"--------------"
+</div>
+<button onclick="appleInfo()">Данные по яблокам на дереве</button>
+<input type="text" id="treeNumber" value="0" />
+
+<script src="main.js"></script>
+
+
+
+
+<script>
+function appleAdd(){
+garden.addNewApple(document.getElementById("treeNumber").value, 0, "red", "big" ,true, true)
+console.log(document.getElementById("treeNumber").value)
+document.getElementById("text").innerHTML=document.getElementById("treeNumber").value;
+//tree.checkAppleStatus(garden[document.getElementById("treeNumber").value]);
+
+}
+//garden[0].addNewApple(0,"red","big",true,true)
+//tree.addNewApple()
+
+//0, 'red', 'big',true, true
+
+
+//document.getElementById("btn").onclick = someFunc;
+
+
+function appleInfo(){
+garden.checkAppleStatus(document.getElementById("treeNumber").value);
+//alert(document.getElementById("txt").value);
+
+}
+
+//document.getElementById("btn").onclick = someFunc;
+
+</script>
+
+  <p></p>
+
+</body>
+
+</html>
